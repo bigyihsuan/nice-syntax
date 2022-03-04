@@ -1,0 +1,98 @@
+// variable declaration
+var x;
+// variable declaration with type
+int x;
+// variable assignment with implied type
+var y = 10;
+// variable assignment with explicit type
+int y = ambiguousFunction();
+// const
+const float PI = 3.1415;
+const TAU = 3.1415 * 2.0;
+
+// types
+int // i64
+float // f64
+bool // boolean
+string // python-like string, chars == strings
+var[] // mixed list/array
+int[] // homogeneous int list
+int[][] // list of int lists
+string:int // dict of string to int
+int[]:float[] // dict of int list to float list
+
+// literals
+int i = -123455;
+float fa = -0.1231;
+float fb = 1.0;
+bool b = false;
+string c = "c";
+string str = "hello\n\"world\"";
+var[] varList = [i, fa, fb, b, c, c, str];
+int[] intList = [1,2,3,4,5];
+int[][] nested = [[2,4,6],[3,6,9],[4,8],[5]];
+int:string dict = <3: "Fizz", 5: "Buzz", 15: "FizzBuzz">;
+
+
+// structs
+struct Point {
+	float x;
+	float y;
+};
+var p = struct Point { x = 5.0; y = 4.3 };
+struct Point p = struct Point { x = 5.0; y = 4.3 };
+// type
+type Point = struct Point;
+Point p = Point { x = 5.0; y = 4.3 };
+var p = Point { x = 5.0; y = 4.3 };
+float sum = p.x + x.y;
+
+// struct with member function and generic
+struct Stack of E {
+	E[] elements;
+	function push from (E item) { this.elements += item; };
+	function pop to E {
+		E e = this.elements at -1;
+		this.elements = this.elements to -2;
+		return e;
+	};
+};
+
+// operations
+// number-number
+// returns float if any arg is float
+// otherwise returns int
+a + b OR a += b
+a - b OR a -= b
+a * b OR a *= b
+a / b OR a /= b
+a % b OR a %= b // ints only
+// collections (string, list)
+a + b OR a += b // concat: [a,b,c] + [x,y] = [a,b,c,x,y]
+                // concat dicts: <1:a, 3:c> + <2:b> = <1:a, 3:c, 2:b>
+a - b OR a -= b // set difference: [a,b,c] - [b,c] = [a]
+// ops that return bool
+a == b, a > b, a >= b, a < b, a <= b // for any primitive (int, float, bool, string)
+a is in b // existence of a in b
+// not to invert
+not a == b
+a is not in b
+// bin bool ops
+a and b
+a or b
+a xor b
+
+
+// collection accessing
+collection at index
+collection (at every step) from start to end
+string alpha = "abcdefg";
+alpha at 3                     == "d";
+alpha at -3                    == "e";
+alpha at 2, 3, -5, 4           == "cdce"
+alpha from 4                   == "efg";
+alpha to 4                     == "abcd";
+alpha from 1 to 4              == "bcd";
+alpha at every -1              == "gfedcba";
+alpha at every -1 from 5 to 2  == "fed";
+alpha at every -2 from 5 to -3 == "fdbge";

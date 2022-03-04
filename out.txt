@@ -1,0 +1,426 @@
+alpha at 3
+(expr (listAccess (listIndexing (listlist alpha) at 3)))
+(expr
+  (listAccess
+    (listIndexing
+      (listlist
+        alpha)
+      at
+      3)))
+alpha at -3
+(expr (listAccess (listIndexing (listlist alpha) at -3)))
+(expr
+  (listAccess
+    (listIndexing
+      (listlist
+        alpha)
+      at
+      -3)))
+alpha at 2, 3, -5, 4
+(expr (listAccess (listIndexing (listlist alpha) at 2 , 3 , -5 , 4)))
+(expr
+  (listAccess
+    (listIndexing
+      (listlist
+        alpha)
+      at
+      2
+      ,
+      3
+      ,
+      -5
+      ,
+      4)))
+alpha from 4
+(expr (listAccess (listSlice (listlist alpha) (fromClause from 4))))
+(expr
+  (listAccess
+    (listSlice
+      (listlist
+        alpha)
+      (fromClause
+        from
+        4))))
+alpha to 4
+(expr (listAccess (listSlice (listlist alpha) (toClause to 4))))
+(expr
+  (listAccess
+    (listSlice
+      (listlist
+        alpha)
+      (toClause
+        to
+        4))))
+alpha from 1 to 4
+(expr (listAccess (listSlice (listlist alpha) (fromToClause (fromClause from 1) (toClause to 4)))))
+(expr
+  (listAccess
+    (listSlice
+      (listlist
+        alpha)
+      (fromToClause
+        (fromClause
+          from
+          1)
+        (toClause
+          to
+          4)))))
+alpha at every -1
+(expr (listAccess (listSlice (listlist alpha) (everyClause at every -1))))
+(expr
+  (listAccess
+    (listSlice
+      (listlist
+        alpha)
+      (everyClause
+        at
+        every
+        -1))))
+alpha at every -1 from 5 to 2
+(expr (listAccess (listSlice (listlist alpha) (everyClause at every -1) (fromToClause (fromClause from 5) (toClause to 2)))))
+(expr
+  (listAccess
+    (listSlice
+      (listlist
+        alpha)
+      (everyClause
+        at
+        every
+        -1)
+      (fromToClause
+        (fromClause
+          from
+          5)
+        (toClause
+          to
+          2)))))
+alpha at every -2 from 5 to -3
+(expr (listAccess (listSlice (listlist alpha) (everyClause at every -2) (fromToClause (fromClause from 5) (toClause to -3)))))
+(expr
+  (listAccess
+    (listSlice
+      (listlist
+        alpha)
+      (everyClause
+        at
+        every
+        -2)
+      (fromToClause
+        (fromClause
+          from
+          5)
+        (toClause
+          to
+          -3)))))
+[1,2,3,4,5,] at 3
+(expr (listAccess (listIndexing (listlist (listLiteral [ (listElement (literal 1)) , (listElement (literal 2)) , (listElement (literal 3)) , (listElement (literal 4)) , (listElement (literal 5)) , ])) at 3)))
+(expr
+  (listAccess
+    (listIndexing
+      (listlist
+        (listLiteral
+          [
+          (listElement
+            (literal
+              1))
+          ,
+          (listElement
+            (literal
+              2))
+          ,
+          (listElement
+            (literal
+              3))
+          ,
+          (listElement
+            (literal
+              4))
+          ,
+          (listElement
+            (literal
+              5))
+          ,
+          ]))
+      at
+      3)))
+[1,2,3,4,5,] at -3
+(expr (listAccess (listIndexing (listlist (listLiteral [ (listElement (literal 1)) , (listElement (literal 2)) , (listElement (literal 3)) , (listElement (literal 4)) , (listElement (literal 5)) , ])) at -3)))
+(expr
+  (listAccess
+    (listIndexing
+      (listlist
+        (listLiteral
+          [
+          (listElement
+            (literal
+              1))
+          ,
+          (listElement
+            (literal
+              2))
+          ,
+          (listElement
+            (literal
+              3))
+          ,
+          (listElement
+            (literal
+              4))
+          ,
+          (listElement
+            (literal
+              5))
+          ,
+          ]))
+      at
+      -3)))
+[1,2,3,4,5,] at 2, 3, -5, 4
+(expr (listAccess (listIndexing (listlist (listLiteral [ (listElement (literal 1)) , (listElement (literal 2)) , (listElement (literal 3)) , (listElement (literal 4)) , (listElement (literal 5)) , ])) at 2 , 3 , -5 , 4)))
+(expr
+  (listAccess
+    (listIndexing
+      (listlist
+        (listLiteral
+          [
+          (listElement
+            (literal
+              1))
+          ,
+          (listElement
+            (literal
+              2))
+          ,
+          (listElement
+            (literal
+              3))
+          ,
+          (listElement
+            (literal
+              4))
+          ,
+          (listElement
+            (literal
+              5))
+          ,
+          ]))
+      at
+      2
+      ,
+      3
+      ,
+      -5
+      ,
+      4)))
+[1,2,3,4,5,] from 4
+(expr (listAccess (listSlice (listlist (listLiteral [ (listElement (literal 1)) , (listElement (literal 2)) , (listElement (literal 3)) , (listElement (literal 4)) , (listElement (literal 5)) , ])) (fromClause from 4))))
+(expr
+  (listAccess
+    (listSlice
+      (listlist
+        (listLiteral
+          [
+          (listElement
+            (literal
+              1))
+          ,
+          (listElement
+            (literal
+              2))
+          ,
+          (listElement
+            (literal
+              3))
+          ,
+          (listElement
+            (literal
+              4))
+          ,
+          (listElement
+            (literal
+              5))
+          ,
+          ]))
+      (fromClause
+        from
+        4))))
+[1,2,3,4,5,] to 4
+(expr (listAccess (listSlice (listlist (listLiteral [ (listElement (literal 1)) , (listElement (literal 2)) , (listElement (literal 3)) , (listElement (literal 4)) , (listElement (literal 5)) , ])) (toClause to 4))))
+(expr
+  (listAccess
+    (listSlice
+      (listlist
+        (listLiteral
+          [
+          (listElement
+            (literal
+              1))
+          ,
+          (listElement
+            (literal
+              2))
+          ,
+          (listElement
+            (literal
+              3))
+          ,
+          (listElement
+            (literal
+              4))
+          ,
+          (listElement
+            (literal
+              5))
+          ,
+          ]))
+      (toClause
+        to
+        4))))
+[1,2,3,4,5,] from 1 to 4
+(expr (listAccess (listSlice (listlist (listLiteral [ (listElement (literal 1)) , (listElement (literal 2)) , (listElement (literal 3)) , (listElement (literal 4)) , (listElement (literal 5)) , ])) (fromToClause (fromClause from 1) (toClause to 4)))))
+(expr
+  (listAccess
+    (listSlice
+      (listlist
+        (listLiteral
+          [
+          (listElement
+            (literal
+              1))
+          ,
+          (listElement
+            (literal
+              2))
+          ,
+          (listElement
+            (literal
+              3))
+          ,
+          (listElement
+            (literal
+              4))
+          ,
+          (listElement
+            (literal
+              5))
+          ,
+          ]))
+      (fromToClause
+        (fromClause
+          from
+          1)
+        (toClause
+          to
+          4)))))
+[1,2,3,4,5,] at every -1
+(expr (listAccess (listSlice (listlist (listLiteral [ (listElement (literal 1)) , (listElement (literal 2)) , (listElement (literal 3)) , (listElement (literal 4)) , (listElement (literal 5)) , ])) (everyClause at every -1))))
+(expr
+  (listAccess
+    (listSlice
+      (listlist
+        (listLiteral
+          [
+          (listElement
+            (literal
+              1))
+          ,
+          (listElement
+            (literal
+              2))
+          ,
+          (listElement
+            (literal
+              3))
+          ,
+          (listElement
+            (literal
+              4))
+          ,
+          (listElement
+            (literal
+              5))
+          ,
+          ]))
+      (everyClause
+        at
+        every
+        -1))))
+[1,2,3,4,5,] at every -1 from 5 to 2
+(expr (listAccess (listSlice (listlist (listLiteral [ (listElement (literal 1)) , (listElement (literal 2)) , (listElement (literal 3)) , (listElement (literal 4)) , (listElement (literal 5)) , ])) (everyClause at every -1) (fromToClause (fromClause from 5) (toClause to 2)))))
+(expr
+  (listAccess
+    (listSlice
+      (listlist
+        (listLiteral
+          [
+          (listElement
+            (literal
+              1))
+          ,
+          (listElement
+            (literal
+              2))
+          ,
+          (listElement
+            (literal
+              3))
+          ,
+          (listElement
+            (literal
+              4))
+          ,
+          (listElement
+            (literal
+              5))
+          ,
+          ]))
+      (everyClause
+        at
+        every
+        -1)
+      (fromToClause
+        (fromClause
+          from
+          5)
+        (toClause
+          to
+          2)))))
+[1,2,3,4,5,] at every -2 from 5 to -3
+(expr (listAccess (listSlice (listlist (listLiteral [ (listElement (literal 1)) , (listElement (literal 2)) , (listElement (literal 3)) , (listElement (literal 4)) , (listElement (literal 5)) , ])) (everyClause at every -2) (fromToClause (fromClause from 5) (toClause to -3)))))
+(expr
+  (listAccess
+    (listSlice
+      (listlist
+        (listLiteral
+          [
+          (listElement
+            (literal
+              1))
+          ,
+          (listElement
+            (literal
+              2))
+          ,
+          (listElement
+            (literal
+              3))
+          ,
+          (listElement
+            (literal
+              4))
+          ,
+          (listElement
+            (literal
+              5))
+          ,
+          ]))
+      (everyClause
+        at
+        every
+        -2)
+      (fromToClause
+        (fromClause
+          from
+          5)
+        (toClause
+          to
+          -3)))))

@@ -1,0 +1,94 @@
+// if/elif/else statements
+if condition1 {
+	doSomething();
+} elif condition2 {
+	doSomethingElse();
+} elif condition3 {
+	doSomethingElse();
+} elif condition4 {
+	doSomethingElse();
+} else {
+	doOtherThing();
+};
+// pattern matching
+match variable {
+	condition => doStuff(),
+	condition2 => {
+		doStuff();
+		doMoreStuff();
+	},
+};
+match x {
+	x % 5 == 0 and x % 3 == 0 => print("fizzbuzz");
+	x % 2 == 0 => print("two");
+	x % 3 == 0 => print("three");
+	x % 5 == 0 => print("five");
+};
+
+// list comprehension
+var div6 = [f for each f from 0 to 100 where f % 6 == 0];
+var div6 = [each f where f % 6 == 0 from 0 to 100];
+// for-each (no for!)
+for each int i from 0 to 100 {
+	print(i);
+};
+for each element in array from 0 to 5 {
+	doSomethingTo(element);
+};
+// while
+while condition {
+	doSomething();
+};
+
+// block
+{ code here }
+{ return 5; } == 5
+{ 5; } == null
+var conditional = if cond1 { 123 } else { "123" };
+var matched = match x {
+	x % 2 == 0 => "two",
+	x % 3 == 0 => "three",
+	x % 5 == 0 => "five",
+	x % 5 == 0 and x % 3 == 0 => "fizzbuzz",
+};
+
+// function
+function funName from (type arg1, type arg2, ... , type argn) to type {
+	body();
+	return returnValue;
+};
+
+// examples
+function factorial from (int n) to int {
+	return match n {
+		n == 1 => 1,
+		else => n * factorial(n-1),
+	};
+};
+function factorial from (int n) to int {
+	int product = 1;
+	for int i from 2 to n+1 {
+		product *= i;
+	};
+	return product;
+};
+// fizbuzz
+function fizzBuzz from (int n) {
+	for int i from 1 to n {
+		match i {
+			where i % 15 == 0 => print("FizzBuzz"),
+			where i % 3 == 0 => print("Fizz"),
+			where i % 5 == 0 => print("Buzz"),
+		};
+	};
+};
+
+// fibonacci
+function fibonacci from (int n) to int {
+	return match n {
+		where n < 0 => -1,
+		0 => 0,
+		1 => 1,
+		n => fibonacci(n-1) + fibonacci(n-2),
+	};
+};
