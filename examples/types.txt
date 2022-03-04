@@ -49,13 +49,13 @@ float sum = p.x + x.y;
 
 // struct with member function and generic
 struct Stack of E {
-	E[] elements;
-	function push from (E item) { this.elements += item; };
+	E[] elements,
+	function push from (E item) { this.elements += item; },
 	function pop to E {
 		E e = this.elements at -1;
 		this.elements = this.elements to -2;
 		return e;
-	};
+	},
 };
 
 // operations

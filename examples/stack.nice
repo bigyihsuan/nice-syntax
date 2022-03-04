@@ -1,0 +1,54 @@
+// struct with member function and generic
+enum Maybe of E {
+    Something(e as E),
+    Nothing,
+};
+
+struct Stack of E {
+	var elements as list of E,
+
+	function push(E item) to void {
+        this.elements += item;
+    },
+	function pop() to Maybe of E {
+        if not this.isEmpty() {
+            var e as E = this.elements at -1;
+            this.elements = this.elements to -2;
+            Something of E(e)
+        } else {
+            Nothing of E
+        }
+	},
+    function isEmpty() to bool {
+        elements.len == 0
+    },
+    function len() to int {
+        elements.len
+    },
+    static function new() to Stack of E {
+        new Stack of E {
+            elements = [] as list of E,
+        }
+    },
+    static function new(initial as list of E) to Stack of E {
+        new Stack of E {
+            elements = initial,
+        }
+    }
+};
+
+function main() {
+    var stuff as list of int = [1, 2, 3, 4, 5, 10];
+    var stack = struct Stack.new() // implicit type
+    
+    for each ele in stuff {
+        stack.push(e);
+    };
+
+    while not stack.isEmpty() {
+        print(match stack.pop() {
+            Something of int(e) is e,
+            Nothing of int is "Nothing",
+        });
+    };
+};

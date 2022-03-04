@@ -8,4 +8,8 @@
 
 ### Desired Language Features
 
-* 
+* Expression-based
+* First-class functions
+* Pattern matching
+* Rust-like enums
+

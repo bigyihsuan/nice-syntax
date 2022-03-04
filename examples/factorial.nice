@@ -1,0 +1,14 @@
+function factorial(n as int) to int {
+	match n {
+		where n == 1 is 1,
+		otherwise is (n * factorial(n-1)),
+	}
+};
+
+function factorial from (n as int) to int {
+	var product as int = 1;
+	for i as int from 2 to n + 1 {
+		product *= i;
+	};
+	product
+};
